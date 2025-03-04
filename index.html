@@ -11,61 +11,23 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
       integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="main-container">
       <div class="Top-section">
         <h1>Todo App</h1>
-        <form>
+        <form id="todo-form">
           <input
             id="todo-input"
             type="text"
             placeholder="Create a new todo..."
-            autocomplete="off"
-          />
-          <button id="add-button">Add</button>
+            autocomplete="off" />
+          <button type="submit" id="add-button">Add</button>
         </form>
       </div>
       <div class="item-container">
-        <ul id="todo-list">
-          <li class="todo">
-            <input type="checkbox" id="todo-1" />
-            <label class="custom-checkbox" for="todo-1"></label>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check"
-            />
-            <label for="todo-1" class="todo-text">
-              Complete online JavaScript course
-            </label>
-            <button class="delete-button">
-              <img
-                src="./material-symbols-light_delete-outline-sharp.png"
-                alt="delete-icon"
-              />
-            </button>
-          </li>
-
-          <li class="todo">
-            <input type="checkbox" id="todo-2" />
-            <label class="custom-checkbox" for="todo-2"></label>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check"
-            />
-            <label for="todo-2" class="todo-text">
-              Jog around the park 3X
-            </label>
-            <button class="delete-button">
-              <img
-                src="./material-symbols-light_delete-outline-sharp.png"
-                alt="delete icon"
-              />
-            </button>
-          </li>
-        </ul>
+        <ul id="todo-list"></ul>
       </div>
     </div>
 
