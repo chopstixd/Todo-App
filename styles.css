@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
 :root {
   --background: #171823;
   --primary-color: #25273d;
@@ -8,6 +10,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Marcellus", serif;
+  letter-spacing: -0.35px;
 }
 body {
   width: 100%;
@@ -16,43 +21,49 @@ body {
 }
 .top-section {
   width: 100%;
-  height: auto;
+  height: 12rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+  row-gap: 1.6rem;
+  background-color: grey;
+  background-image: url(Bitmap.jpg);
+  border-radius: 0.6rem 0.6rem 0rem 0rem;
 }
+
 .main-container {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2rem;
+  row-gap: 4rem;
 }
 h1 {
   margin-top: 100px;
   margin-bottom: 20px;
   font-size: 3rem;
   font-weight: 800;
-  text-transform: uppercase;
   text-align: center;
   color: var(--text-color);
 }
 #todo-input {
   box-sizing: border-box;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 6rem;
   width: 100%;
   background: none;
   border: 2px solid var(--secondary-color);
   border-radius: 0.6rem;
   color: #f4f4f4;
 }
+
 #todo-input:focus {
   outline: none;
 }
 form {
   position: relative;
 }
+
 #add-button {
   position: absolute;
   top: 0;
@@ -88,6 +99,7 @@ form {
   align-items: center;
   padding: 0.8rem;
   background-color: var(--primary-color);
+  border-radius: 0.6rem;
 }
 .delete-button {
   padding: 0.1rem;
@@ -135,7 +147,31 @@ input[type="checkbox"] {
 }
 @media (max-width: 500px) {
   html {
-    font: 12px;
+    font: 10px;
+  }
+  h1 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-color);
+  }
+  .top-section {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+  }
+  .main-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7.8rem;
   }
   #add-button {
     position: unset;
@@ -144,17 +180,28 @@ input[type="checkbox"] {
     padding: 15px;
     height: auto;
   }
+  #todo-input {
+    box-sizing: border-box;
+    padding: 0.6rem 3rem;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 0.6rem;
+    color: #f4f4f4;
+  }
+
   h1 {
     margin-top: 50px;
     font-size: 15vw;
   }
   .item-container {
-    width: 80%;
+    width: 75%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0.8rem;
     background-color: var(--primary-color);
+    border-radius: 0.3rem;
   }
 }
